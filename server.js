@@ -3,7 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var stateJson = require("./states.json");
 app.use(bodyParser.json())
-
+var cors = require('cors')
+ 
+app.use(cors())
 app.get('/', (req,res)=>{
     res.send("Use /state/IND and /api/books for accessing");
 });
@@ -21,7 +23,7 @@ app.get('/state/IND/:stateId', (req,res)=>{
     var state = stateJson.RestResponse.result.filter(state => {
         return state.abbr == stateID;
     });
-    res.json(state);
+    res.json(state[0]);
     
 });
 
