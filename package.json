@@ -10,7 +10,8 @@
     "dependencies": {
         "body-parser": "*",
         "express": "*",
-        "nodemon": "^1.14.11"
+        "nodemon": "^1.14.11",
+        "cors": "^2.8.5",
     },
     "author": "psk",
     "license": "ISC"
